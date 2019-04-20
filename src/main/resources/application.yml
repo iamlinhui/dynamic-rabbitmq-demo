@@ -1,0 +1,31 @@
+rabbitmq:
+  main:
+    addresses: 172.29.1.167
+    port: 5672
+    publisher-confirms: true
+    publisher-returns: true
+    username: admin
+    password: admin
+    listener:
+      simple:
+        acknowledge-mode: manual
+    cache:
+      connection:
+        mode: channel
+    template:
+      mandatory: true
+  damai:
+    addresses: 127.0.0.1
+    port: 5672
+    publisher-confirms: true
+    publisher-returns: true
+    username: admin
+    password: admin
+    listener:
+      simple:
+        acknowledge-mode: manual
+    cache:
+      connection:
+        mode: channel
+    template:
+      mandatory: true
